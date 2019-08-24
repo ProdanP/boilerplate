@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.ebs.baseutility.views.NavigationBar
+        android:id = "@+id/navigation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <com.ebs.baseutility.views.Button
+                android:id="@+id/btn_left"
+                android:minWidth="48dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/nav_back_icon"
+                    tools:ignore="ContentDescription" />
+            </com.ebs.baseutility.views.Button>
+
+
+            <LinearLayout
+                android:layout_toEndOf="@id/btn_left"
+                android:layout_toStartOf="@id/btn_right"
+                android:layout_centerInParent="true"
+                android:id="@+id/navigation_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <com.ebs.baseutility.views.text_views.TextViewStyled
+                    android:id="@+id/titleUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="17sp"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <com.ebs.baseutility.views.Button
+                android:layout_alignParentEnd="true"
+                android:id="@+id/btn_right"
+                android:minWidth="48dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/nav_back_icon"
+                    tools:ignore="ContentDescription" />
+            </com.ebs.baseutility.views.Button>
+
+        </RelativeLayout>
+    </com.ebs.baseutility.views.NavigationBar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@id/navigation_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
